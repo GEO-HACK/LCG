@@ -242,10 +242,10 @@ header ul a {
 }
 
 .ourwork_card_container {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+  
 }
 
 .ourwork_heading {
@@ -410,4 +410,15 @@ footer button:hover {
 #copy {
     text-align: center;
     margin-top: 20px;
+}
+/*about us media query*/
+@media screen and (max-width:840px){
+    .ourwork_card_container{
+        grid-template-columns:1fr 1fr;
+    }
+}
+@media screen and (max-width:640px){
+    .ourwork_card_container{
+        grid-template-columns: 1fr;
+    }
 }
